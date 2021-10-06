@@ -1,0 +1,34 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Điện mặt trời mái nhà ASE</title>
+
+    <link rel="stylesheet" href="{% static 'home/style.css' %}">
+<body>
+    <div class="header">
+        <h1>TRANG TRẠI ĐIỆN NĂNG LƯỢNG MẶT TRỜI MÁI NHÀ ASE</h1>
+    </div>
+    <div class="menu">
+        <ul>
+            <li><a href="{% url "home:ed" %}">Sản lượng ngày</a></li>
+            <li><a href="{% url "home:em" %}">Sản lượng tháng</a></li>
+            <li><a href="{% url "home:ey" %}">Sản lượng năm</a></li>
+            <li><a href="{% url "home:et" %}">Sản lượng toàn bộ</a></li>
+            <li><a href="{% url "home:pout" %}">Công suất đầu ra</a></li>
+            <li><a href="{% url "home:ppd" %}">Công suất đỉnh ngày</a></li>
+            <li><a href="{% url "home:ppy" %}">Công suất đỉnh năm</a></li>
+            <li><a href="{% url "home:u" %}">Điện áp</a></li>
+            <li><a href="{% url "home:i" %}">Dòng điện</a></li>
+        </ul>
+
+    </div>
+    <div class="noidung">
+    {% block content %}
+    {% endblock %}
+    <div>
+
+   </body>
+</html>
